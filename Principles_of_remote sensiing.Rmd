@@ -1,0 +1,175 @@
+---
+title: "Principles of Remote sensing"
+subtitle: "&#x2694;&#xFE0F; xaringan +<br/>&#x1F60E; xaringanthemer"  
+author: 
+  - "Idris Baba"
+date: '`r Sys.Date()`'
+output:
+  xaringan::moon_reader:
+    css: xaringan-themer.css
+    nature:
+      slideNumberFormat: "%current%"
+      highlightStyle: github
+      highlightLines: true
+      ratio: 16:9
+      countIncrementalSlides: true
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(
+  fig.width=9, fig.height=3.5, fig.retina=3,
+  out.width = "100%",
+  cache = FALSE,
+  echo = TRUE,
+  message = FALSE, 
+  warning = FALSE,
+  hiline = TRUE
+)
+```
+
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(xaringanthemer)
+style_duo_accent(
+  primary_color = "#1381B0",
+  secondary_color = "#FF961C",
+  inverse_header_color = "#FFFFFF"
+)
+```
+class: center, middle
+## Remote sensing
+Remote sensing is the acquisition of information about an object or phenomenon without making physical contact with the object, in contrast to in situ or on-site observation. The term is applied especially to acquiring information about Earth and other planets. Remote sensing is used in numerous fields, including geophysics, geography, land surveying and most Earth science disciplines (e.g. exploration geophysics, hydrology, ecology, meteorology, oceanography, glaciology, geology). It also has military, intelligence, commercial, economic, planning, and humanitarian applications, among others.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/YGOxPPSfduY" frameborder="0" allowfullscreen></iframe>
+
+---
+## Multispectral And Hyperspectral
+Multispectral imaging is a remote sensing technique that involves capturing and 
+analyzing electromagnetic radiation from multiple discrete bands or spectral regions of the 
+electromagnetic spectrum [23]. Unlike true-color images that are composed of red, green, and blue bands, multispectral images consist of data captured in several additional bands beyond the visible range, such as near-infrared (NIR) and shortwave infrared (SWIR) regions while **Hyper spectral imaging** is an advanced remote sensing technique that involves 
+capturing and processing data in hundreds or even thousands of narrow and contiguous 
+spectral bands across the electromagnetic spectrum.
+
+![Multispectral & Hyperspectral](Images/Multispectral.png)
+---
+## Electromagnetic Spectrum
+The electromagnetic (EM) spectrum is the range of all types of EM radiation. Radiation is energy that travels and spreads out as it goes – the visible light that comes from a lamp in your house and the radio waves that come from a radio station are two types of electromagnetic radiation. The other types of EM radiation that make up the electromagnetic spectrum are microwaves, infrared light, ultraviolet light, X-rays and gamma-rays...
+
+![Electromagnetic Spectrum](Images/electromagnetic.png)
+
+---
+
+## What is Active and Passive Remote Sensing?
+
+class: center, middle
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vzfGMMEEz5w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
+---
+
+#Passive and Active Sensors `#`
+
+
+| **Sensor Type**   | **Definition**                                                                 | **Operation**                                                                                 |
+|--------------------|-------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|
+| **Active Sensor**  | Emits energy or signals into the environment and measures the response or reflection of that energy. | Generates and emits signals (e.g., radio waves, sound waves, lasers) and analyzes responses from the target object. |
+| **Passive Sensor** | Relies on naturally available energy, such as sunlight, to measure reflected or emitted signals from objects. | Detects and measures energy naturally emitted or reflected without actively generating signals. |
+
+---
+class: inverse center middle
+
+# Applications of Remote Sensing: How It Is Revolutionizing Agriculture, Environment, and Urban planning
+
+---
+## Applications of Remote Sensing
+
+### Environmental Monitoring
+- Tracking deforestation, desertification, and land degradation.
+- Assessing water quality, wetlands, and biodiversity conservation efforts.
+
+### Agriculture
+- Monitoring crop health, soil moisture levels, and irrigation planning.
+- Identifying pest infestations or nutrient deficiencies through vegetation indices.
+
+### Disaster Management
+- Assessing damage caused by natural disasters like hurricanes, earthquakes, floods, and wildfires.
+- Mapping areas for emergency response and recovery operations.
+
+### Urban Planning and Development
+- Monitoring urban sprawl, land-use change, and infrastructure growth.
+- Planning transportation networks and zoning regulations.
+
+### Climate Change Studies
+- Tracking changes in glaciers, polar ice caps, and sea-level rise.
+- Monitoring greenhouse gas emissions and assessing carbon sinks like forests.
+
+### Water Resource Management
+- Mapping river basins, monitoring reservoir levels, and predicting droughts.
+- Studying surface and groundwater distribution.
+
+---
+### Geology and Mineral Exploration
+- Identifying mineral-rich zones and geological formations.
+- Monitoring seismic activity and mapping fault lines.
+
+### Oceanography
+- Studying ocean currents, temperature, and salinity.
+- Tracking marine ecosystems and mapping algal blooms.
+
+### Military and Defense
+- Reconnaissance, surveillance, and strategic planning.
+- Monitoring borders and tracking troop movements.
+
+### Public Health
+- Mapping disease outbreak patterns and vector habitats.
+- Studying environmental factors that influence health outcomes.
+
+---
+## Landsat Versus Sentinel
+
+## Spectral Bands - Sentinel-2 MSI
+
+| **Band** | **Description**              | **Wavelengths (nm)** | **Resolution (m)** | **Feature Set**      |
+|----------|------------------------------|----------------------|--------------------|----------------------|
+| 1        | Coastal aerosol              | 433–453             | 60                 | – – – – –            |
+| 2        | Blue                         | 458–523             | 10                 | A B C D              |
+| 3        | Green                        | 543–578             | 10                 | A B C D              |
+| 4        | Red                          | 650–680             | 10                 | A B C D              |
+| 5        | Vegetation Red Edge (RE1)    | 698–713             | 20                 | A – – – E            |
+| 6        | Vegetation Red Edge (RE2)    | 733–748             | 20                 | A – – – E            |
+| 7        | Vegetation Red Edge (RE3)    | 773–793             | 20                 | A – – – E            |
+| 8        | Near-Infrared (NIR)          | 785–900             | 10                 | A – C D              |
+| 8a       | Narrow NIR (nNIR)            | 855–875             | 20                 | A B C – E            |
+| 9        | Water vapor                  | 935–955             | 60                 | – – – – –            |
+| 10       | Shortwave infrared - Cirrus  | 1360–1390           | 60                 | – – – – –            |
+| 11       | Shortwave infrared (SWIR1)   | 1565–1655           | 20                 | A B C – E            |
+| 12       | Shortwave infrared (SWIR2)   | 2100–2280           | 20                 | A B C – E            |
+
+---
+
+## Spectral Bands - Landsat 8 OLI
+
+| **Band** | **Description**               | **Wavelengths (nm)** | **Resolution (m)** | **Feature Set** |
+|----------|-------------------------------|----------------------|--------------------|-----------------|
+| 1        | Violet-deep Blue (V-D Blue)   | 433–453             | 30                 | A –             |
+| 2        | Blue                          | 450–515             | 30                 | A B             |
+| 3        | Green                         | 525–600             | 30                 | A B             |
+| 4        | Red                           | 630–680             | 30                 | A B             |
+| 5        | Near-Infrared (NIR)           | 845–885             | 30                 | A B             |
+| 8        | Pan-Chromatic                 | 500–680             | 30                 | – –             |
+| 9        | SWIR - Cirrus                 | 1360–1390           | 30                 | – –             |
+| 6        | Shortwave infrared (SWIR1)    | 1560–1660           | 30                 | A B             |
+| 7        | Shortwave infrared (SWIR2)    | 2100–2300           | 30                 | A B             |
+---
+class: center, middle
+
+# Thanks!
+
+Slides created via the R packages:
+
+[**xaringan**](https://github.com/yihui/xaringan)<br>
+[gadenbuie/xaringanthemer](https://github.com/gadenbuie/xaringanthemer)
+
+The chakra comes from [remark.js](https://remarkjs.com), [**knitr**](http://yihui.name/knitr), and [R Markdown](https://rmarkdown.rstudio.com).
